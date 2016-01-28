@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="AnchorPane" prefHeight="418.0" prefWidth="370.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestor.de.despesas.FXMLController">
+   <children>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="418.0" prefWidth="542.0">
+         <bottom>
+            <Button fx:id="button" mnemonicParsing="false" onAction="#addDespesa" text="Adicionar" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="10.0" left="300.0" />
+               </BorderPane.margin>
+            </Button>
+         </bottom>
+         <center>
+            <GridPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="337.0" prefWidth="395.0" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="245.0" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="357.0" minWidth="0.0" prefWidth="275.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <padding>
+                  <Insets left="20.0" top="20.0" />
+               </padding>
+               <children>
+                  <Label text="Despesa:" />
+                  <TextField GridPane.columnIndex="1" />
+                  <TextField fx:id="textFieldPreco" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="textFieldDespesa" GridPane.columnIndex="1" />
+                  <TextField fx:id="textFieldData" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextArea fx:id="textAreaNota" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <TextField fx:id="textFieldDoc" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label text="Preço:" GridPane.rowIndex="1" />
+                  <Label text="Data:" GridPane.rowIndex="2" />
+                  <Label text="Import doc :" GridPane.rowIndex="3" />
+                  <Label text="Nota:" GridPane.rowIndex="4" />
+               </children>
+            </GridPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
