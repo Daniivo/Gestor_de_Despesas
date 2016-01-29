@@ -68,6 +68,7 @@ public class Despesas{
 
     @Override
     public String toString() {
+      
         return "Despesas{" + "despesa=" + despesa + ", preco=" + preco + ", data=" + data + ", doc=" + doc + ", nota=" + nota + '}';
         
     }
