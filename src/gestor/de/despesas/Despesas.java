@@ -5,77 +5,78 @@
  */
 package gestor.de.despesas;
 
-import java.util.ArrayList;
+import javafx.beans.property.FloatProperty;
+import javafx.beans.property.SimpleFloatProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 
 /**
  *
  * @author danrodrigues
  */
 public class Despesas{
-    private String despesa;
-    private Float  preco;
-    private String data;
-    private String doc;
-    private String nota;
-
-    public Despesas(String despesa, Float preco, String data, String doc, String nota) {
-        this.despesa = despesa;
-        this.preco = preco;
-        this.data = data;
-        this.doc = doc;
-        this.nota = nota;
+    private final StringProperty despesa;
+    private final FloatProperty  preco;
+    private final StringProperty data;
+    private final StringProperty doc;
+    private final StringProperty nota;
+   
+    public Despesas(String despesa, Float preco, String data, String doc, String nota){
+        this.despesa = new SimpleStringProperty(despesa);
+        this.preco   = new SimpleFloatProperty (preco);
+        this.data    = new SimpleStringProperty(data);
+        this.doc     = new SimpleStringProperty(doc);
+        this.nota    = new SimpleStringProperty(nota);
     }
 
-    public String getDespesa() {
-        return despesa;
+    public String getDespesa(){
+        return despesa.get();
     }
-
-    public Float getPreco() {
-        return preco;
+    public void setDespesa(String despesa){
+        this.despesa.set(despesa);
     }
-
-    public String getData() {
-        return data;
+    public StringProperty despesaProperty(){
+       return despesa;
     }
-
-    public String getDoc() {
-        return doc;
+    public Float getPreco(){
+        return preco.get();
     }
-
-    public String getNota() {
-        return nota;
+    public void setPreco(Float preco){
+        this.preco.set(preco);
     }
-
-    public void setDespesa(String despesa) {
-        this.despesa = despesa;
+    public FloatProperty precoProperty(){
+       return preco;
     }
-
-    public void setPreco(Float preco) {
-        this.preco = preco;
+    public String getData(){
+        return data.get();
     }
-
-    public void setData(String data) {
-        this.data = data;
+    public void setData(String data){
+        this.data.set(data);
     }
-
-    public void setDoc(String doc) {
-        this.doc = doc;
+    public StringProperty dataProperty(){
+       return data;
     }
-
-    public void setNota(String nota) {
-        this.nota = nota;
+    public String getDoc(){
+        return doc.get();
+    }
+    public void setDoc(String doc){
+        this.doc.set(doc);
+    }
+    public StringProperty docProperty(){
+       return doc;
+    }
+    public String getNota(){
+        return nota.get();
+    }
+    public void setNota(String nota){
+        this.nota.set(nota);
+    }
+    public StringProperty notaProperty(){
+       return nota;
     }
 
     @Override
     public String toString() {
-      
         return "Despesas{" + "despesa=" + despesa + ", preco=" + preco + ", data=" + data + ", doc=" + doc + ", nota=" + nota + '}';
-        
     }
-    
-    
-    
-    
-    
-    
 }

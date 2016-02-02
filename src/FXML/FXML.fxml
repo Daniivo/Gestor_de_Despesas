@@ -13,7 +13,7 @@
          <bottom>
             <Button fx:id="button" mnemonicParsing="false" onAction="#addDespesa" text="Adicionar" BorderPane.alignment="CENTER">
                <BorderPane.margin>
-                  <Insets bottom="10.0" left="300.0" />
+                  <Insets bottom="5.0" left="300.0" top="10.0" />
                </BorderPane.margin>
             </Button>
          </bottom>
@@ -49,25 +49,10 @@
             </GridPane>
          </center>
          <top>
-            <MenuBar BorderPane.alignment="CENTER">
-              <menus>
-                <Menu mnemonicParsing="false" text="File">
-                  <items>
-                    <MenuItem mnemonicParsing="false" text="Close" />
-                  </items>
-                </Menu>
-                <Menu fx:id="listDespesas" mnemonicParsing="false" text="Lista de Despesas">
-                  <items>
-                    <MenuItem fx:id="btShowDespesa" mnemonicParsing="false" onAction="#showDespesa" text="Lista de Despesas" />
-                  </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Help">
-                  <items>
-                    <MenuItem mnemonicParsing="false" text="About" />
-                  </items>
-                </Menu>
-              </menus>
-            </MenuBar>
+            <Button mnemonicParsing="false" onAction="#showDespesa" text="Consultar Despesas" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets top="15.0" />
+               </BorderPane.margin></Button>
          </top>
       </BorderPane>
    </children>

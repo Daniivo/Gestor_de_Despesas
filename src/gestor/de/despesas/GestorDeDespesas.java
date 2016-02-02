@@ -20,7 +20,7 @@ import javafx.stage.Stage;
 public class GestorDeDespesas extends Application {
     
     @Override
-    
+        
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("/FXML/FXML.fxml"));
         
@@ -29,10 +29,6 @@ public class GestorDeDespesas extends Application {
         stage.setScene(scene);
         stage.show();
     }
-
- 
-
-
     /**
      * @param args the command line arguments
      */
